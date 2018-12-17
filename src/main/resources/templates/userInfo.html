@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>用户信息</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="form-group">
+    <h4>
+        <!--<div th:text="${data}"></div>-->
+        ID：
+        <div th:text="${data.uid}"></div>
+        账户名：
+        <div th:text="${data.account}"></div>
+        密码：
+        <div th:text="${data.password}"></div>
+        盐值：
+        <div th:text="${data.salt}"></div>
+        角色组：
+        <div th:text="${data.rids}"></div>
+    </h4>
+</div>
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- 包括所有已编译的插件 -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

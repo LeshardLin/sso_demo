@@ -1,0 +1,22 @@
+spring:
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/face2019_demo?characterEncoding=UTF-8&useSSL=false&serverTimezone=Hongkong
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  #配置JPA
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8

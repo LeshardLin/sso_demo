@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户登录</title>
+    <!-- 引入 Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+<form action="userLogin" class="form-horizontal" role="form" method="post" style="padding: 50px;">
+    <div class="form-group">
+        <h4>
+            <div style="color: red" th:text="${msg}"></div>
+        </h4>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">账户名：</label>
+        <div class="col-lg-2">
+            <input name="account" class="form-control" id="focusedInput" type="text" placeholder="请输入账户名">
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="col-sm-2 control-label">密码：</label>
+        <div class="col-lg-2">
+            <input name="password" class="form-control" id="focusedInput" type="password" placeholder="请输入密码">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+                <label>
+                    <input name="rememberMe" type="checkbox" value="remember">请记住我
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default">登录</button>
+        </div>
+    </div>
+</form>
+<!-- jQuery (Bootstrap 的 JavaScript 插件需要引入 jQuery) -->
+<script src="https://code.jquery.com/jquery.js"></script>
+<!-- 包括所有已编译的插件 -->
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
